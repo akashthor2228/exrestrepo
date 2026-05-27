@@ -74,15 +74,15 @@ WSGI_APPLICATION = 'RestProject.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
-
+from decouple import config
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'restdatabase',
-        'USER': 'root',
-        'PASSWORD': '2228',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': config('defaultdb'),
+        'USER': config('avnadmin'),
+        'PASSWORD': config('AVNS_yCdWa9BOfm5Fa21LPEa'),
+        'HOST': config('mysql-6652614-akashthor2228-af9b.c.aivencloud.com'),
+        'PORT': config('14691'),
     }
 }
 
