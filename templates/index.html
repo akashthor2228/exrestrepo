@@ -1,10 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Students Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #f5f4f0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-wrap {
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid #e4e2da;
+      padding: 4rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      max-width: 600px;
+      width: 90%;
+    }
+
+    .dots {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, #ccc 1px, transparent 1px);
+      background-size: 24px 24px;
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    .content { position: relative; z-index: 1; }
+
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: #e1f5ee;
+      color: #0f6e56;
+      padding: 4px 14px;
+      border-radius: 8px;
+      margin-bottom: 1.2rem;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 700;
+      color: #2c2c2a;
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 span { color: #1D9E75; }
+
+    .accent-bar {
+      width: 48px;
+      height: 3px;
+      background: #1D9E75;
+      border-radius: 2px;
+      margin: 1rem auto;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      color: #888780;
+    }
+  </style>
 </head>
 <body>
-<h1>hello {{ students }}]</h1>
+  <div class="hero-wrap">
+    <div class="dots"></div>
+    <div class="content">
+      <span class="badge">Django template</span>
+      <h1>hello <span>{{ students }}</span></h1>
+      <div class="accent-bar"></div>
+      <p class="subtitle">Rendered from your Django view context</p>
+    </div>
+  </div>
 </body>
 </html>
