@@ -79,10 +79,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': config('DB_NAME'),
-        'USER': config('avnadmin'),
-        'PASSWORD': config('AVNS_yCdWa9BOfm5Fa21LPEa'),
-        'HOST': config('mysql-6652614-akashthor2228-af9b.c.aivencloud.com'),
-        'PORT': config('14691'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT'),
     }
 }
 
