@@ -78,7 +78,7 @@ from decouple import config
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': config('defaultdb'),
+        'NAME': config('DB_NAME'),
         'USER': config('avnadmin'),
         'PASSWORD': config('AVNS_yCdWa9BOfm5Fa21LPEa'),
         'HOST': config('mysql-6652614-akashthor2228-af9b.c.aivencloud.com'),
