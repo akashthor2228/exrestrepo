@@ -25,3 +25,8 @@ class StudentAPI(APIView):
         new_student.save()
 
         return Response("api")
+
+
+def index(request):
+    students = Student.objects.all()
+    return render(request,'index.html',{"students":students})
