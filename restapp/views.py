@@ -28,5 +28,5 @@ class StudentAPI(APIView):
 
 
 def index(request):
-    students = Student.objects.all()
+    students = Student.objects.all().values_list('name')
     return render(request,'index.html',{"students":students})
